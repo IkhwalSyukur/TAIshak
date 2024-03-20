@@ -13,7 +13,7 @@
 #define SD_CS 5
 
 #define MY_MAX(a, b, c) max(max(a, b), c)
-#define relay 2
+#define relay 13
 
 #define PZEM_RX_PIN 16 
 #define PZEM_TX_PIN 17 
@@ -151,10 +151,11 @@ void ReadSenser(){
             lcd.clear();
             lcd.setCursor(0,0);
             lcd.print("V= ");
-            lcd.setCursor(0,3);
+            lcd.setCursor(3,0);
             lcd.print(VoltLL[i]);
-            lcd.setCursor(1,0);
+            lcd.setCursor(0,1);
             lcd.print("A= ");
+            lcd.setCursor(3,1);
             lcd.print(current[i],4);
             // Serial.println(voltage[0]);
             // Serial.println(voltage[1]);
